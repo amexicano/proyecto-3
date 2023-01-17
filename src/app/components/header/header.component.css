@@ -1,0 +1,33 @@
+header {
+    padding: 1.5em 1em;
+    background: linear-gradient(-45deg, #6874E8 3%, #7A5C61 20%, #392759 100%);
+    color: #FFF;
+}
+
+header h1 {
+    font-size: 1.75em;
+}
+
+a,
+a:link,
+a:visited {
+    text-decoration: none;
+    color: #E8F0FF
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+nav {
+    list-style-type: none;
+    overflow: hidden;
+}
+
+nav li:first-child {
+    margin-left: 0;
+}
+
+nav li:last-child {
+    margin-right: 0;
+}

@@ -1,1 +1,23 @@
 /* You can add global styles to this file, and also import other style files */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-row {
+    flex-direction: row;
+}
+
+.flex-center {
+    align-items: center;
+    justify-content: space-between;
+}
+
+.flex-gap-1 {
+    gap: 1em;
+}
