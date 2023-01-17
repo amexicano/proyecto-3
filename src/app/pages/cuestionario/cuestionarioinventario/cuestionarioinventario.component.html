@@ -1,1 +1,414 @@
-<p>cuestionarioinventario works!</p>
+<style>
+    h1 {
+        font-family: Helvetica, Geneva, Arial, SunSans-Regular, sans-serif
+    }
+
+    body {
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-color: #1abc9c;
+    }
+
+
+    header {
+        padding: .25em 1.5em;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1em;
+        background: linear-gradient(-45deg, #6874E8 3%, #7A5C61 20%, #392759 100%);
+        color: #FFF;
+        position: fixed;
+        top: 0;
+        width: 100%;
+    }
+
+    header h1 {
+        font-size: 2em;
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+        margin: 6.5em 5em 0 5em;
+        background: #FFF;
+        padding: 1em;
+        box-shadow: 0 0 .5em rgba(0, 0, 0, .5);
+        padding: 20px;
+    }
+
+    section {
+        padding: 1em;
+        box-shadow: 0 0 .25em rgba(122, 92, 97, 0.5);
+    }
+
+    section:hover {
+        box-shadow: 0 0 .25em rgba(122, 92, 97, 0.85);
+    }
+
+    .right {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    .top-description {
+        border-top: #F7ACCF solid 1px;
+    }
+
+    footer {
+        /* Fixed to bottom */
+        display: flex;
+        flex-direction: row-reverse;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background: linear-gradient(-45deg, #392759 20%, #6874E8 66.67%, #6874E8 83.33%, #7A5C61 100%);
+        color: #E8F0FF;
+    }
+
+    section ul {
+        display: flex;
+        flex-direction: row;
+        gap: 1em;
+        list-style-type: upper-alpha;
+        overflow: hidden;
+        justify-content: space-between;
+    }
+
+    footer ol {
+        display: flex;
+        flex-direction: row;
+        gap: 1em;
+        list-style-type: none;
+        overflow: hidden;
+    }
+
+    footer ol li::after {
+        margin-left: 1em;
+        content: '|';
+    }
+
+    footer ol li:last-child::after {
+        margin-left: 0em;
+        content: '';
+    }
+
+    .relative-footer {
+        position: relative;
+    }
+
+    .fixed-footer {
+        position: fixed;
+    }
+
+    footer>* {
+        padding: .25em 1em;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 1em;
+        list-style-type: none;
+        overflow: hidden;
+    }
+
+    nav li:first-child {
+        margin-left: 0;
+    }
+
+    nav li:last-child {
+        margin-right: 0;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+
+    a:link,
+    a:visited {
+        color: #E8F0FF
+    }
+
+    ul {
+        list-style-type: upper-alpha;
+        list-style-position: inside;
+        padding: 0 20px;
+    }
+
+    ol {
+        list-style-type: disc;
+        list-style-position: inside;
+        padding: 0 20px;
+    }
+
+    .options {
+        margin: 0;
+        padding: 0;
+    }
+
+    input {
+        margin: 0;
+        padding: 0;
+        height: 1em;
+        width: 4em;
+    }
+
+    .options input {
+        float: right;
+        border: none;
+        text-align: center;
+    }
+
+    section.invalid input {
+        color: white;
+        background-color: red;
+    }
+
+    section.valid input {
+        color: white;
+        background-color: #85cd00;
+    }
+
+    #button-div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        grid-column: 1 / 3;
+    }
+
+    #button-div input {
+        font-size: 1em;
+    }
+
+    .two-column {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .two-column-section {
+        display: grid;
+        grid-template-columns: 2fr 5fr;
+    }
+
+    .flex-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    section>ul>li.options {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    section>img {
+        display: block;
+        margin: 0 auto;
+    }
+
+    .three-column {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: .4em;
+    }
+
+    .pregunta {
+        /* Pon en negritas las letras */
+        font-weight: bold;
+    }
+</style>
+<p>
+<h1>Inventario de la Motivación Personal</h1>
+
+<form method="post" action="./resultados.php">
+    <input id="data" name="data" hidden />
+    <main>
+        <section class="pregunta">
+            <span>
+                1. Me siento mejor con los demás cuando…
+            </span>
+            <ul class="three-column">
+                <li class="options">
+                    <span>
+                        Los dirijo.
+                    </span>
+                    (<input type="number" />)
+                </li>
+                <li class="options"><span>Me acemptan. </span>(<input type="number" />)
+                </li>
+                <li class="options"><span>Aprendo algo de ellos. </span>(<input type="number" />)
+                </li>
+            </ul>
+
+        </section>
+
+        <section class="pregunta">
+            <span>
+                2. Obtengo la mejor parte para mí siendo…
+            </span>
+            <ul class="three-column">
+                <li class="options"><span>Oportunista. </span>(<input type="number" />)
+                </li>
+
+                <li class="options"><span>Amistoso. </span>(<input type="number" />)
+                </li>
+
+                <li class="options"><span>Congruente conmigo. </span>(<input type="number" />)
+                </li>
+            </ul>
+
+        </section>
+
+        <section class="pregunta">
+            <span>
+                3. Me siento bien conmigo mismo cuándo…
+            </span>
+            <ul class="three-column">
+                <li class="options"><span>Busco ser líder. </span>(<input type="number" />)
+                </li>
+
+                <li class="options"><span>Me adapto al grupo. </span>(<input type="number" />)
+                </li>
+
+                <li class="options"><span>Actúo por un ideal. </span>(<input type="number" />)
+                </li>
+            </ul>
+
+        </section>
+
+        <section class="pregunta">
+            <span>
+                4. Yo me esfuerzo más cuando…
+            </span>
+            <ul class="three-column">
+                <li class="options"><span>Hay dinero de por medio.</span>(<input type="number" />)
+                </li>
+
+                <li class="options"><span>Reconocen mi esfuerzo. </span>(<input type="number" />)
+                </li>
+
+                <li class="options"><span>Me gusta lo que hay que hacer. </span>(<input type="number" />)
+                </li>
+            </ul>
+
+        </section>
+
+        <section class="pregunta">
+            <span>
+                5. Al relacionarme con otros pienso en…
+            </span>
+            <ul class="three-column">
+                <li class="options"><span>La influencia que tienen. </span>(<input type="number" />)
+                </li>
+
+                <li class="options"><span>En la confianza que me tienen.</span>(<input type="number" />)
+                </li>
+
+                <li class="options"><span>En lo que significa para mi desarrollo. </span>(<input type="number" />)
+                </li>
+            </ul>
+
+        </section>
+
+        <section class="pregunta">
+            <span>
+                6. Me da más miedo…
+            </span>
+            <ul class="three-column">
+                <li class="options"><span>La pobreza. </span>(<input type="number" />)
+                </li>
+
+                <li class="options"><span>La soledad. </span>(<input type="number" />)
+                </li>
+
+                <li class="options"><span>La falta de sentido de la vida. </span>(<input type="number" />)
+                </li>
+            </ul>
+
+        </section>
+
+        <section class="pregunta">
+            <span>
+                7. Impresiono a otros presentándome como…
+            </span>
+            <ul class="three-column">
+                <li class="options"><span>Una persona astuta y audaz. </span>(<input type="number" />)
+                </li>
+
+                <li class="options"><span>Cariñosa y comprometida. </span>(<input type="number" />)
+                </li>
+
+                <li class="options"><span>Culta e inteligente. </span>(<input type="number" />)
+                </li>
+            </ul>
+
+        </section>
+
+        <section class="pregunta">
+            <span>
+                8. Frente al fracaso yo…
+            </span>
+            <ul class="three-column">
+                <li class="options"><span>Me siento lesionado en mis derechos. </span><input type="number" />
+                </li>
+
+                <li class="options"><span>Busco consuelo en los demas. </span>(<input type="number" />)
+                </li>
+
+                <li class="options"><span>Busco una explicacion que me ayude a mejorar.
+                    </span>(<input type="number" />)
+                </li>
+            </ul>
+        </section>
+
+        <section class="pregunta">
+            <span>
+                9. Lo que más disfruto es (son)…
+            </span>
+            <ul class="three-column">
+                <li class="options"><span>Los éxitos económicos. </span>(<input type="number" />)
+                </li>
+
+                <li class="options"><span>La compañia de mi familia. </span>(<input type="number" />)
+                </li>
+
+                <li class="options"><span>Los logros profesionales. </span>(<input type="number" />)
+                </li>
+            </ul>
+
+        </section>
+
+        <section class="pregunta">
+            <span>
+                10. Para vencer las dificultades yo…
+            </span>
+            <ul class="three-column">
+                <li class="options"><span>Uso toda mi fuerza. </span>(<input type="number" />)
+                </li>
+
+                <li class="options"><span>Necesito ayuda de los demas. </span>(<input type="number" />)
+                </li>
+
+                <li class="options"><span>Apelo a mi formacion interior. </span>(<input type="number" />)
+                </li>
+            </ul>
+
+        </section>
+
+        <div id="button-div">
+            <input id="submit" disabled="false" type="submit" value="Enviar respuestas" />
+        </div>
+    </main>
+</form>

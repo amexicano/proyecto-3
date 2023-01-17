@@ -1,1 +1,129 @@
-<p>cuestionarioautoestima works!</p>
+<form [formGroup]="autoestimaForm" (ngSubmit)="calcular()">
+    <h2>ESCALA DE AUTOESTIMA DE ROSEMBERG</h2>
+    <div class="flex flex-column flex-justify-center">
+        <table border="1">
+            <tr>
+                <td>
+                </td>
+                <td>
+                    <h2>A</h2>
+                </td>
+                <td>
+                    <h2>B</h2>
+                </td>
+                <td>
+                    <h2>C</h2>
+                </td>
+                <td>
+                    <h2>D</h2>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <h3>1. Siento que soy una persona digna de aprecio, al menos
+                        en igual medida que los dem&aacute;s.</h3>
+                </td>
+
+                <td><input type="radio" value="1" name="autoestima1"></td>
+                <td><input type="radio" value="2" name="autoestima1"></td>
+                <td><input type="radio" value="3" name="autoestima1"></td>
+                <td><input type="radio" value="4" name="autoestima1"></td>
+            </tr>
+            <tr>
+                <td>
+                    <h3>2. Estoy convencido de que tengo cualidades buenas.</h3>
+                </td>
+
+                <td><input type="radio" value="1" name="autoestima2"></td>
+                <td><input type="radio" value="2" name="autoestima2"></td>
+                <td><input type="radio" value="3" name="autoestima2"></td>
+                <td><input type="radio" value="4" name="autoestima2"></td>
+            </tr>
+            <tr>
+                <td>
+                    <h3>3. Soy capaz de hacer las cosas tan bien como la mayor&iacute;a de la gente.</h3>
+                </td>
+
+                <td><input type="radio" value="1" name="autoestima3"></td>
+                <td><input type="radio" value="2" name="autoestima3"></td>
+                <td><input type="radio" value="3" name="autoestima3"></td>
+                <td><input type="radio" value="4" name="autoestima3"></td>
+            </tr>
+            <tr>
+                <td>
+                    <h3>4. Tengo una actitud positiva hacia mi mismo/a.</h3>
+                </td>
+
+                <td><input type="radio" value="1" name="autoestima4"></td>
+                <td><input type="radio" value="2" name="autoestima4"></td>
+                <td><input type="radio" value="3" name="autoestima4"></td>
+                <td><input type="radio" value="4" name="autoestima4"></td>
+            </tr>
+            <tr>
+                <td>
+                    <h3>5. En general estoy satisfecho/a de mi mismo/a.</h3>
+                </td>
+
+                <td><input type="radio" value="1" name="autoestima5"></td>
+                <td><input type="radio" value="2" name="autoestima5"></td>
+                <td><input type="radio" value="3" name="autoestima5"></td>
+                <td><input type="radio" value="4" name="autoestima5"></td>
+            </tr>
+            <tr>
+                <td>
+                    <h3>6. Siento que no tengo mucho de lo que estar orgulloso/a.</h3>
+                </td>
+
+                <td><input type="radio" value="1" name="autoestima6"></td>
+                <td><input type="radio" value="2" name="autoestima6"></td>
+                <td><input type="radio" value="3" name="autoestima6"></td>
+                <td><input type="radio" value="4" name="autoestima6"></td>
+            </tr>
+
+            <tr>
+                <td>
+                    <h3>7. En general, me inclino a pensar que soy un fracasado/a.</h3>
+                </td>
+
+                <td><input type="radio" value="1" name="autoestima7"></td>
+                <td><input type="radio" value="2" name="autoestima7"></td>
+                <td><input type="radio" value="3" name="autoestima7"></td>
+                <td><input type="radio" value="4" name="autoestima7"></td>
+            </tr>
+            <tr>
+                <td>
+                    <h3>8. Me gustar&iacute; poder sentir m&aacute;s respeto por mi mismo.</h3>
+                </td>
+
+                <td><input type="radio" value="1" name="autoestima8"></td>
+                <td><input type="radio" value="2" name="autoestima8"></td>
+                <td><input type="radio" value="3" name="autoestima8"></td>
+                <td><input type="radio" value="4" name="autoestima8"></td>
+            </tr>
+            <tr>
+                <td>
+                    <h3>9. Hay veces que realmente pienso que soy un in&uacute;til.</h3>
+                </td>
+
+                <td><input type="radio" value="1" name="autoestima9"></td>
+                <td><input type="radio" value="2" name="autoestima9"></td>
+                <td><input type="radio" value="3" name="autoestima9"></td>
+                <td><input type="radio" value="4" name="autoestima9"></td>
+            </tr>
+            <tr>
+                <td>
+                    <h3>10. A veces creo que no soy buena persona.</h3>
+                </td>
+
+                <td><input type="radio" value="1" name="autoestima10"></td>
+                <td><input type="radio" value="2" name="autoestima10"></td>
+                <td><input type="radio" value="3" name="autoestima10"></td>
+                <td><input type="radio" value="4" name="autoestima10"></td>
+            </tr>
+        </table>
+        <br>
+        <div class="flex flex-row flex-justify-center">
+            <button type="submit">Enviar respuesta</button>
+        </div>
+    </div>
+</form>

@@ -16,6 +16,7 @@ import { CuestionarioasertividadComponent } from './pages/cuestionario/cuestiona
 import { CuestionarioautoestimaComponent } from './pages/cuestionario/cuestionarioautoestima/cuestionarioautoestima.component';
 import { CuestionariochasideComponent } from './pages/cuestionario/cuestionariochaside/cuestionariochaside.component';
 import { CuestionariointeligenciaComponent } from './pages/cuestionario/cuestionariointeligencia/cuestionariointeligencia.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { CuestionariointeligenciaComponent } from './pages/cuestionario/cuestion
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
