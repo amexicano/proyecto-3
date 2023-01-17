@@ -11,3 +11,8 @@ section:first-child {
 section:hover {
     box-shadow: 0 0 .25em rgba(122, 92, 97, 0.85);
 }
+
+a:link,
+a:visited {
+    color: blueviolet;
+}

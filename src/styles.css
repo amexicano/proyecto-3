@@ -21,6 +21,10 @@
     flex-direction: column;
 }
 
+.flex-justify-center {
+    justify-content: center;
+}
+
 .flex-center {
     align-items: center;
     justify-content: space-between;
@@ -28,4 +32,14 @@
 
 .flex-gap-1 {
     gap: 1em;
+}
+
+.two-column-section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.three-column-section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
 }
