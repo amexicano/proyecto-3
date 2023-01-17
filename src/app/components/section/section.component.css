@@ -1,0 +1,13 @@
+section {
+    margin: 1em 0;
+    padding: 1em;
+    box-shadow: 0 0 .25em rgba(122, 92, 97, 0.5);
+}
+
+section:first-child {
+    margin-top: 0;
+}
+
+section:hover {
+    box-shadow: 0 0 .25em rgba(122, 92, 97, 0.85);
+}
