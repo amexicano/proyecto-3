@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { FormBuilder } from '@angular/forms';
+import { FormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-cuestionarioautoestima',
@@ -15,20 +15,38 @@ export class CuestionarioautoestimaComponent implements OnInit {
   }
 
   autoestimaForm = this.fb.group({
-    autoestima1: [''],
-    autoestima2: [''],
-    autoestima3: [''],
-    autoestima4: [''],
-    autoestima5: [''],
-    autoestima6: [''],
-    autoestima7: [''],
-    autoestima8: [''],
-    autoestima9: [''],
-    autoestima10: [''],
+    autoestima1: ['', Validators.required],
+    autoestima2: ['', Validators.required],
+    autoestima3: ['', Validators.required],
+    autoestima4: ['', Validators.required],
+    autoestima5: ['', Validators.required],
+    autoestima6: ['', Validators.required],
+    autoestima7: ['', Validators.required],
+    autoestima8: ['', Validators.required],
+    autoestima9: ['', Validators.required],
+    autoestima10: ['', Validators.required],
   });
 
   calcular() {
-    //alert(JSON.stringify(this.autoestimaForm.value));
+    alert(JSON.stringify(this.autoestimaForm.value))
+    if (this.autoestimaForm.invalid) {
+      return false;
+    }
+
+    let respuestas = [
+      this.autoestimaForm.value.autoestima1,
+      this.autoestimaForm.value.autoestima2,
+      this.autoestimaForm.value.autoestima3,
+      this.autoestimaForm.value.autoestima4,
+      this.autoestimaForm.value.autoestima5,
+      this.autoestimaForm.value.autoestima6,
+      this.autoestimaForm.value.autoestima7,
+      this.autoestimaForm.value.autoestima8,
+      this.autoestimaForm.value.autoestima9,
+      this.autoestimaForm.value.autoestima10
+    ];
+
+    return false;
   }
 
 }
